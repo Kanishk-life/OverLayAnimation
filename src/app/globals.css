@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*===================== bounce effect========================== */
+.bounce {
+  font-weight: 700;
+  animation: bounceOverlay 0.5s linear;
+}
+
+@keyframes bounceOverlay {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==================================shake effect================================ */
+
+.shake-shadow {
+  font-weight: 600 !important;
+  font-size: 2rem;
+}
+.shake {
+  animation: shakeOverlay 0.1s linear;
+}
+
+@keyframes shakeOverlay {
+  0%,
+  50% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(1.8);
+  }
+}
+
+/* ==================================fade effect================================ */
+.fade-border {
+  text-shadow: 6px 4px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,
+    -2px -2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+  font-size: 2.6rem;
+}
+.fade {
+  animation: fadeOverlay 0.5s linear;
+}
+
+@keyframes fadeOverlay {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*========================== bounce-float effect======================= */
+.bounceFloat-border {
+  text-shadow: 6px 6px 5px #000, -6px 6px 5px #000, 6px -6px 5px #000,
+    -6px -6px 5px #000, 6px 0px 5px #000, -6px 0 5px #000, 0px 6px 5px #000,
+    0 -6px 5px #000;
+}
+
+.bounce-float {
+  font-weight: bolder;
+  animation: bounceFloatOverlay 0.2s linear;
+}
+@keyframes bounceFloatOverlay {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  55% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
